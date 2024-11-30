@@ -1,0 +1,37 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch FirstApi",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/FirstApi/bin/Debug/net9.0/FirstApi.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/FirstApi",
+            "stopAtEntry": false,
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        },
+        {
+            "name": "Launch SecondApi",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/SecondApi/bin/Debug/net9.0/SecondApi.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/SecondApi",
+            "stopAtEntry": false,
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        },
+    ],
+    "compounds": [
+        {
+            "name": "Launch Both APIs",
+            "configurations": ["Launch FirstApi", "Launch SecondApi"]
+        }
+    ]        
+}
